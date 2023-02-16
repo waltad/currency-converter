@@ -1,7 +1,7 @@
 # Currency converter
 ## Currency calculator
 
-![Version 1.1](images/version-1-1-scren.jpg)
+![Version 1.1](images/version-1-1-screen.jpg)
 
 It is a currency calculator that is used to convert the PLN currency value to such currencies as:
 
