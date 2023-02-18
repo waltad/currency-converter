@@ -1,7 +1,5 @@
 .background {
-    background-image: url("../images/background.jpg");
-    background-position: central;
-    background-repeat: repeat;
+    background-image:  linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/background.jpg");
+    background-blend-mode: hard-light;
     background-size: cover;
-    background-color: darkseagreen;
-}
+   }
