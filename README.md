@@ -1,6 +1,9 @@
 # Currency converter
 ## Currency calculator
+New version
+![New version](images/introduction.gif)
 
+Previous version
 ![Version 1.1](images/version-1-1-screen.jpg)
 
 It is a currency calculator that is used to convert the PLN currency value to such currencies as:
@@ -13,6 +16,10 @@ It is a currency calculator that is used to convert the PLN currency value to su
 
 https://waltad.github.io/currency-converter/
 
+## Instruction
+1. Enter the value in PLN in the first field.
+2. Select a currency in the second field.
+3. Click or select the "Zatwierdź" ("Approve") box.
 ## Tech
 
 Currency converter uses a number of open source projects to work properly:
