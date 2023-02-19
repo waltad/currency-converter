@@ -1,38 +1,50 @@
-const plnAmountElement = document.querySelector(".js-plnAmount");
-const currencyElement = document.querySelector(".js-currency");
-const resultElement = document.querySelector(".js-result");
-const formElement = document.querySelector(".js-form");
-const plnAmountEnteredElement = document.querySelector(".js-plnAmountEntered");
-const currencyEnteredElement = document.querySelector(".js-currencyEntered");
-
-const rateEUR = 4.77;
-const rateUSD = 4.45;
-const rateGBP = 5.36;
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const plnAmout = +plnAmountElement.value;
-    const currency = currencyElement.value;
-
-    let result;
-
-    switch (currency) {
-        case "EUR":
-            result = plnAmout / rateEUR;
-            break;
-            
-        case "USD":
-            result = plnAmout / rateUSD;
-            break;
-
-        case "GBP":
-            result = plnAmout / rateGBP;
-            break;
-
+{
+    const calkulateResult = (plnAmount, currency) => {
+        const rateEUR = 4.7689;
+        const rateUSD = 4.4494;
+        const rateGBP = 5.3588;
+    
+        switch (currency) {
+            case "EUR":
+                return plnAmount / rateEUR;
+                
+            case "USD":
+                return plnAmount / rateUSD;
+    
+            case "GBP":
+                return plnAmount / rateGBP;
+        }
     }
-
-    resultElement.innerText = result.toFixed(2);
-    plnAmountEnteredElement.innerText = plnAmountElement.value;
-    currencyEnteredElement.innerText = currencyElement.value;
-});
+    
+    const updateResultText = (result, plnAmount, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        const plnAmountEnteredElement = document.querySelector(".js-plnAmountEntered");
+        const currencyEnteredElement = document.querySelector(".js-currencyEntered");
+        
+        resultElement.innerText = result.toFixed(2);
+        plnAmountEnteredElement.innerText = plnAmount;
+        currencyEnteredElement.innerText = currency;
+    }
+    
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    
+        const plnAmountElement = document.querySelector(".js-plnAmount");
+        const currencyElement = document.querySelector(".js-currency");
+    
+        const currency = currencyElement.value;
+        const plnAmount = plnAmountElement.value;
+    
+        const result = calkulateResult(+plnAmount, currency);
+    
+        updateResultText(result, plnAmount, currency);
+    }
+    
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+    
+        formElement.addEventListener("submit", onFormSubmit);
+    }
+    
+    init();
+}
