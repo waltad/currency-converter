@@ -24,6 +24,7 @@
     color: gold;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .form__button:hover {
